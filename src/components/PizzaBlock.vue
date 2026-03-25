@@ -27,7 +27,7 @@ const setActiveType = (idx) => {
     <h4 class="pizza-block__title">{{ title }}</h4>
     <div class="pizza-block__selector">
       <ul>
-        <li @click="setActiveType(type)" v-for="(type) in types" :class="{active: activeType === type}">
+        <li @click="setActiveType(type)" v-for="(type) in types" :key="type" :class="{active: activeType === type}">
           {{ typeArr[type] }}
         </li>
       </ul>
