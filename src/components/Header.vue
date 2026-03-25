@@ -1,19 +1,20 @@
 <script setup>
 import logo from "../assets/logo.jpg"
+import {RouterLink} from "vue-router";
 </script>
 
 <template>
   <header class="header">
     <div class="container">
-      <div class="header__logo">
+      <RouterLink to="/" class="header__logo">
         <img width="38px" height="38px" :src="logo" alt="Pizza logo" />
         <div>
           <h1>Vue Pizza</h1>
           <p>самая вкусная пицца во вселенной</p>
         </div>
-      </div>
+      </RouterLink>
       <div class="header__cart">
-        <a href="/cart.html" class="button button--cart">
+        <RouterLink to="/cart" class="button button--cart">
           <span>520 ₽</span>
           <div class="button__delimiter"></div>
           <svg
@@ -46,7 +47,7 @@ import logo from "../assets/logo.jpg"
             />
           </svg>
           <span>3</span>
-        </a>
+        </RouterLink>
       </div>
     </div>
   </header>
